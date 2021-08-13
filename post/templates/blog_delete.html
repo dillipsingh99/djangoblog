@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div style='padding:40px' class="alert alert-secondary " role="alert">
+    <h1>Delete BLog Post</h1>
+        <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>Are sure you want to delete.</p>
+        <b>{{ blog.title }}</b>
+        <div style='padding:40px' class="alert alert-secondary " role="alert">
+            <img src="{{blog.img.url}}" alt="Smiley face" width="600" height="250">
+        </div>
+        <input type="submit" value="Confirm">
+    </form>
+</div>
+{% endblock content %}
