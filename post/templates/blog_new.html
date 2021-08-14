@@ -2,8 +2,7 @@
 {% load crispy_forms_tags %}
 {% load static %}
 {% block content %}
-<div style='padding:40px' class="alert alert-secondary " role="alert">
-    <div style='padding:40px' class="alert alert-secondary " role="alert">
+   
         <h1><strong>New post</strong></h1>
         <form action="" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
@@ -11,6 +10,6 @@
             {{ form | crispy }}
             <input type="submit" value="Save">
         </form>
-    </div>
-</div>   
+   
+
 {% endblock content %}

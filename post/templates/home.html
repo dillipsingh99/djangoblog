@@ -1,26 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div style='padding:3rem' class="alert alert-secondary text-center" role="alert">
-    
         {% for post in dataset %}
-        
-        <div class="alert alert-secondary" role="alert">   
             <h2><a href="{% url 'blog_datail' post.id%}"><strong>{{ post.title }}</strong></a></h2>
-            
                 <a>{{post.author}}</a> | <a>{{post.created_at}}</a>
-            
-     
-            <div padding="10rem" class="alert alert-secondary" role="alert">
+            <div style='padding:3rem' class="alert alert-secondary" role="alert">
                 <img src="{{post.img.url}}" class="img-fluid" alt="...">
-            </div>
-            <div class="alert alert-secondary " role="alert">
+            </div>            
             <p>{{ post.description|safe }}</p>
-            </div>
-        </div>
         {% endfor %}
-  
-</div>
 
 {% endblock content %}
 

@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'profile.css' %}">\
+    <link rel="stylesheet" href="{% static 'profile.css' %}">
     <link rel="stylesheet" href="{% static 'base.css' %}">
   
 
@@ -24,11 +24,11 @@
   </head>
   <body style="background-color:success">
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-success">
-      <a class="navbar-brand" href="#"><strong><h1>SimpleIsBetter</h1></strong></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="#"><strong><h2>SimpleIsBetter</h2></strong></a>
+      <div class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
-    
+          
+      </div>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
@@ -77,8 +77,9 @@
     
           {% endif %}
       </div>
+      
     </nav>
-    <div style='padding:3rem' class="alert alert-secondary" role="alert">
+    <div style='margin-top:4rem' class="alert alert-secondary text-center" role="alert">
     {% block content %}
 
     {% endblock content %}
