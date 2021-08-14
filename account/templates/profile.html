@@ -1,27 +1,27 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div style='padding:40px' class="alert alert-secondary text-center" role="alert">
-<h2 style="text-align:center">User Profile</h2>
-
-<div class="card">
-  <img src="{{user.img.url}}" alt="Avatar" class="avatar" >
-  <h1>{{user.username}}</h1>
-  <p>{{user.email}}</p>
-  <p>{{user.contact_number}}</p>
-  <p>{{user.age}} years</p>
-  <p>{{user.education}}</p>
-  <p>{{user.address}}</p>
-  <p class="title">Working for SimpleIsBetterThanComplex</p>
-  <p>Kurkushetra University</p>
-  <div class="social-icons" style="margin: 24px 0;">
-    <a href="#" class="fa fa-facebook btn-social btn-facebook"></a>
-    <a href="#"><i class="fa fa-dribbble"></i></a> 
-    <a href="#"><i class="fa fa-twitter"></i></a>  
-    <a href="#"><i class="fa fa-linkedin"></i></a>  
-    <a href="#"><i class="fa fa-facebook"></i></a> 
+<div style='padding:3rem' class="alert alert-secondary text-center" role="alert">
+  <div style='padding:4rem' class="alert alert-secondary text-center" role="alert">
+      <h2><strong>User Profile</strong></h2>
+      <div style='padding:4rem' class="alert alert-secondary text-center" role="alert">
+        <img src="{{user.img.url}}" alt="Avatar" class="avatar" >
+        <h1><strong>Username : {{user.username}}</strong></h1>
+        <p>Email : {{user.email}}</p>
+        <p>Coontact : {{user.contact_number}}</p>
+        <p>Age : {{user.age}} years</p>
+        <p>Qualification : {{user.education}}</p>
+        <p>Adress : {{user.address}}</p>
+        <p class="title">Working for SimpleIsBetterThanComplex</p>
+        <p>Kurkushetra University</p>
+        <div class="social-icons" style="margin: 24px 0;">
+          <a href="#" class="fa fa-facebook btn-social btn-facebook"></a>
+          <a href="#"><i class="fa fa-dribbble"></i></a> 
+          <a href="#"><i class="fa fa-twitter"></i></a>  
+          <a href="#"><i class="fa fa-linkedin"></i></a>  
+          <a href="#"><i class="fa fa-facebook"></i></a> 
+        </div>
+      </div>
   </div>
-  <p><button>Contact</button></p>
-</div>
 </div>
 {% endblock content %}

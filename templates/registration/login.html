@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-<div style='padding:40px' class="alert alert-secondary text-center" role="alert">
-    <div style='padding:40px' class="alert alert-secondary text-center" role="alert">
+<div style='padding:8rem' class="alert alert-secondary" role="alert">
+    <div class="alert alert-secondary" role="alert">
         <h2>Login Page</h2><br>    
-        <div class="login">    
+    
             <form method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
@@ -11,7 +11,7 @@
             </form>   
             <p>Don't forget your password.You don't have option to reset password 
                 so, Carefully handle your Account password.</p>
-        </div>    
+    
     </div>
 </div>
 

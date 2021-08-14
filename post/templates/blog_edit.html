@@ -2,10 +2,11 @@
 {% load crispy_forms_tags %}
 {% load static %}
 {% block content %}
-<div style='padding:40px' class="alert alert-secondary " role="alert">
+<div style='padding:3rem' class="alert alert-secondary " role="alert">
     <h1>Edit post</h1>
     <form action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
+        {{ form.media }}
         {{ form | crispy }}
         <input type="submit" value="Update">
     </form>

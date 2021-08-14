@@ -1,16 +1,15 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-<div style='padding:40px' class="alert alert-secondary " role="alert">
-<div class='sign'>
-    <h2>Signup Pages</h2>
-        <div class="signup">
-            <form enctype="multipart/form-data" method="post">
-                {% csrf_token %}
-                {{ form | crispy }}
-                <button class="btn btn-success" type="submit">Sign up</button>
-            </form>
-        </div>
-</div>
-</div>
+<div style='padding:6rem' class="alert alert-secondary" role="alert">
+    <div class="alert alert-secondary" role="alert">
+        <h2>Signup Pages</h2>
+                <form enctype="multipart/form-data" method="post">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <button class="btn btn-success" type="submit">Sign up</button>
+                </form>
+    </div>
+</div>    
+
 {% endblock content %}

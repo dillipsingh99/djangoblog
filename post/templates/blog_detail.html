@@ -2,27 +2,26 @@
 {% load crispy_forms_tags %}
 {% load static %}
 {% block content %}
-<div style='padding:40px' class="alert alert-secondary text-center" role="alert">
-    <div style='padding:10px' class="alert alert-secondary " role="alert">
-        <div style='padding:10px' class="alert alert-secondary " role="alert">
+<div style='padding:4rem' class="alert alert-secondary text-center" role="alert">
+        <div class="alert alert-secondary " role="alert">
             <h2><a href=""><strong>{{ data.title }}</strong></a></h2>
             <div class="card-footer text-center text-muted">
             <a><strong>{{data.author }}</strong></a> | <a>{{ data.created_at }}</a>
             </div>
-            <div style='padding:10px' class="alert alert-secondary text-center" role="alert">
-                <img src="{{data.img.url}}" alt="Smiley face" width="800" height="300" >
+            <div  role="alert">
+                <img class="img-fluid" src="{{data.img.url}}" alt="Smiley face">
             </div>
-            <div style='padding:10px' class="alert alert-secondary text-center" role="alert">
+            <div class="alert alert-secondary text-center" role="alert">
             <p>{{ data.description|safe }}</p>
             </div> 
-            <div style='padding:10px' class="alert alert-secondary text-center" role="alert">
+            <div class="alert alert-secondary text-center" role="alert">
                 <p>{{ data.body|safe }}</p>
             </div>  
             <div class="card-footer text-center text-muted">
             <a href="{% url 'blog_edit' data.pk%}">Edit</a> | <a href="{% url 'blog_delete' data.pk%}">Delete</a>
             </div>
         </div>
-        <div style='padding:10px' class="alert alert-secondary " role="alert">
+        <div class="alert alert-secondary text-center" role="alert">
             <form action="" method="POST">
                 {% csrf_token %}
                 {{form.media}}
@@ -30,7 +29,7 @@
                 <input type="submit" value="Save">
             </form> 
         </div>
-            <div style='padding:10px' class="alert alert-secondary " role="alert">
+            <div class="alert alert-secondary " role="alert">
                 {% for comment in comments %}
                 <div class="card-footer text-center text-muted"></div>
                     <a><strong>{{comment.author}}</strong></a> | <a>{{comment.created_at}}</a>
@@ -40,6 +39,6 @@
                 {% endfor %}
             </div>
         
-    </div>
+   
 </div>
 {% endblock content %}

@@ -1,16 +1,24 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div style='padding:40px' class="alert alert-secondary " role="alert">
-    <h1>Delete BLog Post</h1>
-        <form action="" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        <p>Are sure you want to delete.</p>
-        <b>{{ blog.title }}</b>
-        <div style='padding:40px' class="alert alert-secondary " role="alert">
-            <img src="{{blog.img.url}}" alt="Smiley face" width="600" height="250">
-        </div>
-        <input type="submit" value="Confirm">
-    </form>
+<div style='padding:3rem' class="alert alert-secondary text-center" role="alert">
+    <div style='padding:3rem' class="alert alert-secondary " role="alert">
+        <h1>Delete BLog Post</h1>
+            <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>Are sure you want to delete.</p>
+            <h2><a href=""><strong>{{ blog.title }}</strong></a></h2>
+            <div class="card-footer  text-muted">
+            <a><strong>{{blog.author }}</strong></a> | <a>{{ blog.created_at }}</a>
+            </div>
+            <div class="alert alert-secondary " role="alert">
+                <img src="{{blog.img.url}}" alt="Smiley face" width="600" height="250">
+            </div>
+            <div class="alert alert-secondary text-center" role="alert">
+                <p>{{ blog.description|safe }}</p>
+            </div> 
+            <input type="submit" value="Confirm">
+        </form>
+    </div>
 </div>
 {% endblock content %}
